@@ -1,0 +1,58 @@
+{
+  "name": "test-app",
+  "version": "1.0.0",
+  "description": "",
+  "author": "fsl0110",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack serve --config ./.config/webpack.config.dev.js",
+    "build:live": "webpack yarn lint && yarn test --config ./.config/webpack.config.prod.js --env=live",
+    "build:analyze": "webpack --config ./.config/webpack.config.prod.js --env=analyze",
+    "build:stage": "yarn lint && yarn test && webpack --config ./.config/webpack.config.prod.js ",
+    "build:stage:swc": "yarn lint && yarn test && webpack --config ./.config/webpack.config.prod.js --env=swc",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "yarn lint:scripts && yarn lint:styles",
+    "lint:scripts": "eslint src/**/*.{ts,tsx}",
+    "lint:styles": "stylelint --fix src/**/*.{css,scss,ts,tsx}",
+    "browsers": "browserslist --coverage"
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "useTabs": false,
+    "tabsWidth": 2,
+    "bracketSpacing": true,
+    "arrowParens": "avoid",
+    "trailingComma": "es5"
+  },
+  "browserslist": [
+    "last 4 version"
+  ],
+  "eslintConfig": {
+    "extends": "react-typescript",
+    "rules": {}
+  },
+  "stylelint": {
+    "extends": "@fsl0110/stylelint-config-css-sass-sc",
+    "rules": {}
+  },
+  "jest": {
+    "preset": "@fsl0110/jest-preset-enzyme"
+  },
+  "dependencies": {
+    "@types/react": "^16.9.56",
+    "@types/react-dom": "^16.9.9",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@fsl0110/jest-preset-enzyme": "1.0.0",
+    "@fsl0110/stylelint-config-css-sass-sc": "1.0.0",
+    "@fsl0110/webpack-preset": "^1.0.0",
+    "eslint-config-react-typescript": "^1.0.0",
+    "postcss-loader": "^4.1.0"
+  }
+}

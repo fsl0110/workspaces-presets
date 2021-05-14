@@ -1,0 +1,29 @@
+{
+  "name": "@fsl0110/stylelint-config-css-sass-sc",
+  "version": "1.0.0",
+  "description": "A shareable Stylelint-Preset for Css, Sass and Styled-Components",
+  "keywords": [
+    "stylelint",
+    "stylelint-config",
+    "stylelint-css",
+    "stylelint-scss",
+    "stylelint-styled-components",
+    "css",
+    "sass",
+    "scss",
+    "styled-components"
+  ],
+  "author": "fsl0110",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "prettier": "^2.2.0",
+    "stylelint": "^13.7.2",
+    "stylelint-config-sass-guidelines": "^7.1.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-prettier": "^1.1.2"
+  }
+}

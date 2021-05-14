@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": [
+      "ES2015",
+      "ES2016",
+      "ES2017",
+      "ES2018",
+      "ES2019",
+      "ES2020",
+      "ESNext",
+      "dom"
+    ],
+    "jsx": "react",
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "isolatedModules": true,
+    "allowJs": true,
+    "types": ["jest"]
+  },
+  "include": ["src/**/*", "modules.d.ts", "../webpack-preset/main.tsx"],
+  "exclude": ["node_modules"]
+}

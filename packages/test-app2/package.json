@@ -1,0 +1,52 @@
+{
+  "name": "test-app2",
+  "version": "1.0.0",
+  "description": "",
+  "author": "fsl0110",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack serve --config ./.config/webpack.config.dev.js",
+    "build": "yarn lint && yarn test && webpack --config ./.config/webpack.config.prod.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watchAll",
+    "lint": "yarn lint:scripts && yarn lint:styles",
+    "lint:scripts": "eslint src/**/*.{ts,tsx}",
+    "lint:styles": "stylelint --fix src/**/*.{css,scss,ts,tsx}"
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "useTabs": false,
+    "tabsWidth": 2,
+    "bracketSpacing": true,
+    "arrowParens": "avoid",
+    "trailingComma": "es5"
+  },
+  "eslintConfig": {
+    "extends": "react-typescript",
+    "rules": {}
+  },
+  "stylelint": {
+    "extends": "@fsl0110/stylelint-config-css-sass-sc",
+    "rules": {
+      "declaration-colon-newline-after": null,
+      "value-list-comma-newline-after": null
+    }
+  },
+  "jest": {
+    "preset": "@fsl0110/jest-preset"
+  },
+  "dependencies": {
+    "@types/react": "^16.9.56",
+    "@types/react-dom": "^16.9.9",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "eslint-config-react-typescript": "^1.0.0",
+    "@fsl0110/jest-preset-enzyme": "1.0.0",
+    "@fsl0110/stylelint-config-css-sass-sc": "1.0.0",
+    "@fsl0110/webpack-preset": "^1.0.0"
+  }
+}

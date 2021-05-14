@@ -1,0 +1,34 @@
+{
+  "name": "workspaces-presets",
+  "author": "fsl0110",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test-app:start": "yarn workspace test-app start",
+    "test-app:build:live": "yarn workspace test-app build:live",
+    "test-app:build:analyze": "yarn workspace test-app build:analyze",
+    "test-app:build:stage": "yarn workspace test-app build:stage",
+    "test-app:build:stage:swc": "yarn workspace test-app build:stage:swc",
+    "test-app:test": "yarn workspace test-app test",
+    "test-app:test:watch": "yarn workspace test-app test:watch",
+    "test-app:test:coverage": "yarn workspace test-app test:coverage",
+    "test-app:lint": "yarn workspace test-app lint",
+    "test-app:lint:scripts": "yarn workspace test-app lint:scripts",
+    "test-app:lint:styles": "yarn workspace test-app lint:styles",
+    "test-app:browsers": "yarn workspace test-app browsers",
+    "test-app2:start": "yarn workspace test-app2 start",
+    "test-app2:build:live": "yarn workspace test-app2 build:live",
+    "test-app2:build:analyze": "yarn workspace test-app2 build:analyze",
+    "test-app2:build:stage": "yarn workspace test-app2 build:stage",
+    "test-app2:build:stage:swc": "yarn workspace test-app2 build:stage:swc",
+    "test-app2:test": "yarn workspace test-app2 test",
+    "test-app2:test:watch": "yarn workspace test-app2 test:watch",
+    "test-app2:test:coverage": "yarn workspace test-app2 test:coverage",
+    "test-app2:lint": "yarn workspace test-app2 lint",
+    "test-app2:lint:scripts": "yarn workspace test-app2 lint:scripts",
+    "test-app2:lint:styles": "yarn workspace test-app2 lint:styles",
+    "test-app2:browsers": "yarn workspace test-app2 browsers"
+  }
+}
